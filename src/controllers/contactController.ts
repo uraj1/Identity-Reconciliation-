@@ -16,7 +16,7 @@ export const identify = async (
     // Process the identification request
     const result = await identityService.identifyContact(email, phoneNumber);
     
-    // Return the formatted response
+    // Return the formatted responses
     return res.status(200).json({
       contact: result
     });

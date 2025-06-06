@@ -242,7 +242,7 @@ export class IdentityService {
       contact => contact.linkPrecedence === 'secondary'
     );
     
-    // Collect all unique emails and phone numbers
+    // Collect all unique emails & phone numbers
     const emails = new Set<string>();
     const phoneNumbers = new Set<string>();
     const secondaryContactIds: number[] = [];

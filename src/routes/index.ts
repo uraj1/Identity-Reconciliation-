@@ -7,7 +7,7 @@ const router = Router();
 // Contact identification endpoint
 router.post('/identify', validateIdentifyInput, identify);
 
-// Health check endpoint
+// Health check endpoint to verify server status
 router.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });

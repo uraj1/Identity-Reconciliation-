@@ -15,7 +15,7 @@ export const validateIdentifyInput = [
     .isString()
     .withMessage('Phone number must be a string'),
   
-  // At least one of email or phoneNumber must be provided
+  // At least one of email or phoneNumber must be provided by the user
   body()
     .custom((body) => {
       if (!body.email && !body.phoneNumber) {
