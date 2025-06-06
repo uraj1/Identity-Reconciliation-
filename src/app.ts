@@ -1,4 +1,5 @@
 import express from 'express';
+import { Request, Response } from 'express';
 import cors from 'cors';
 import routes from './routes';
 import { errorHandler } from './utils/errorHandler';
@@ -11,7 +12,7 @@ app.use(express.json());
 
 
 // Health check route at root
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Bitespeed Identity Reconciliation API is running successfully!');
 });
 
