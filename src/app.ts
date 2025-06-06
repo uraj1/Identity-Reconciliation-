@@ -9,6 +9,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+// Health check route at root
+app.get('/', (req, res) => {
+  res.send('Bitespeed Identity Reconciliation API is running successfully!');
+});
+
 // Routes
 app.use('/', routes);
 
